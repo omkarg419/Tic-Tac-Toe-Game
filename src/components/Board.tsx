@@ -15,7 +15,7 @@ export function Board({
 	disabled = false,
 }: BoardProps) {
 	return (
-		<div className="grid w-full max-w-[22rem] grid-cols-3 gap-3 sm:max-w-[24rem] lg:max-w-[28rem]">
+		<div className="grid w-full max-w-[24rem] grid-cols-3 gap-3 sm:max-w-[26rem] lg:max-w-[30rem]">
 			{board.map((value, index) => (
 				<Square
 					key={index}

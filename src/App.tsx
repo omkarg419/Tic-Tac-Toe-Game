@@ -44,8 +44,8 @@ function App() {
 							isDraw={isDraw}
 						/>
 
-						<div className="flex flex-col items-center gap-6 lg:flex-row lg:items-start lg:justify-center lg:gap-10">
-							<div className="glass-panel neon-grid rounded-[1.75rem] p-4 sm:p-5">
+						<div className="flex flex-col items-center justify-center gap-6">
+							<div className="glass-panel neon-grid rounded-4xl p-5 sm:p-6 lg:p-7">
 								<Board
 									board={board}
 									winningCells={winningCells}
@@ -54,52 +54,7 @@ function App() {
 								/>
 							</div>
 
-							<aside className="glass-panel w-full max-w-md rounded-[1.75rem] p-5 sm:p-6 lg:max-w-sm">
-								<div className="space-y-5 text-left">
-									<div>
-										<p className="text-xs uppercase tracking-[0.4em] text-slate-400">
-											Current Cycle
-										</p>
-										<p
-											className={`mt-2 text-3xl font-bold ${currentPlayer === "X" ? "text-cyan-300" : "text-fuchsia-300"}`}
-										>
-											Player {currentPlayer}
-										</p>
-									</div>
-
-									<div className="grid gap-3 rounded-2xl border border-white/8 bg-white/5 p-4 text-sm text-slate-300">
-										<p>
-											• Winning line glow locks on the active row, column, or
-											diagonal.
-										</p>
-										<p>
-											• Moves are blocked after a win or draw to keep the state
-											clean.
-										</p>
-										<p>
-											• Reset instantly reboots the arena for a fresh match.
-										</p>
-									</div>
-
-									<ControlButton
-										onClick={resetGame}
-										className="w-full"
-									>
-										Reset Game
-									</ControlButton>
-
-									<div className="rounded-2xl border border-cyan-300/10 bg-black/20 p-4 text-xs uppercase tracking-[0.35em] text-slate-400">
-										<p className="text-white/70">Status</p>
-										<p className="mt-2 text-sm tracking-[0.22em] text-cyan-200">
-											{winner
-												? "Victory sequence active"
-												: isDraw
-													? "Draw protocol engaged"
-													: "Match in progress"}
-										</p>
-									</div>
-								</div>
-							</aside>
+							<ControlButton onClick={resetGame}>Reset Game</ControlButton>
 						</div>
 
 						<footer className="border-t border-white/8 pt-5 text-center text-xs tracking-[0.3em] text-slate-500 sm:text-sm">
