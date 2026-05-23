@@ -1,4 +1,4 @@
-# Neon Tic Tac Toe
+#  Tic Tac Toe
 
 A modern Tic Tac Toe game built with React, TypeScript, Vite, and Tailwind CSS. The UI uses a neon cyberpunk style with glassmorphism panels, glowing board cells, and smooth interactions.
 
